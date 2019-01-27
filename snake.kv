@@ -1,0 +1,57 @@
+<Fruit>:
+    size: 50, 50
+    canvas:
+        Color:
+            rgb: 1, 0, 0
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Bloc>
+    canvas:
+        Color:
+            rgb: 0, 1, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<SerpentComplet>
+    canvas:
+        Color:
+            rgb: 0,1,0
+
+<Tete>
+    canvas:
+        Color:
+            rgb: 1, 1, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<SnakeGame>:
+    fruit: snake_fruit
+    tete: snake_tete
+    serp_complete: snake_body
+
+
+
+    Label:
+        font_size: 70
+        center_x: root.width / 2
+        top: root.top - 50
+        text: str(root.tete.score)
+
+
+
+    Fruit:
+        id: snake_fruit
+
+    Tete:
+        id: snake_tete
+        size: 50, 50
+        center_x: root.center_x
+        center_y: root.center_y
+
+    SerpentComplet:
+        id: snake_body
+
